@@ -1,0 +1,139 @@
+ <html>
+<head>
+	<title>fundamentos intermedios </title>
+<meta charset="utf-8">
+<script type="text/javascript">
+
+
+
+//parte 1
+
+//Función1//
+
+function sigma(x) {
+            var suma = 3;
+            for (var i = 1; i <= x; i++) {
+                suma = suma + i
+            }
+            return suma;
+        }
+
+ console.log(sigma(5));
+
+       
+//Funcion2//
+
+function factorial(){
+	var multi=4;
+	for(i=1; i<=n; i++){
+		multi=multi*i;
+			}	return multi;
+		}
+var n=3;	
+console.log(factorial());
+
+//Funcion3//
+
+	function fibonacci(x) {
+            if (x == 0)
+                return 0;
+            if (x == 1)
+                return 1;
+            var a = 0;
+                b = 1;
+                c = 1;
+            for (var i = 2; i <= x; i++) {
+                a = b;
+                b = c;
+                c = a + b;
+            }
+            return c;
+        }
+ console.log(fibonacci(6));
+
+
+//Funcion4//
+	function penultimo(){
+			if(x.length<3){
+				console.log("null");
+			}
+			else{
+				console.log(x[y]);
+			}
+		return x;
+		}
+
+		var x=[5,10,"Pablo",7,"penultimo",3];
+		var y=x.length-2;
+		abc=penultimo();
+
+
+//Funcion5//
+
+function ultimo(x, y) {
+            if (x.length < y)
+                return null;
+            else
+                return x[x.length - (y + 1)];
+        }
+        console.log(ultimo([4,2,6,9],5));
+
+
+
+//Funcion6//
+
+
+function mayor(){
+			if (x.length<3){
+				console.log("null");
+			}
+			else{
+				for (i=0; i<x.length-1; i++){
+					for (j=i+1; j<x.length; j++){
+						if (x[i]<x[j]){
+							var hellow=x[i];
+							x[i]=x[j];
+							x[j]=hellow;
+						}
+					}
+				}
+			}
+			return x[1];
+		}
+		var x=[3,4,14,7,20,"Alejandro",19]
+		console.log(mayor());
+
+
+//Funcion7//
+
+
+		function problem2(){
+			var duplica=[];
+			for (i=0; i<x.length; i++){
+				duplica.push(x[i]);
+				duplica.push(x[i]);
+			}
+			return duplica;
+		}
+
+		var x=[3,5,"eterno", 56,false];
+		console.log(problem2());
+
+
+    
+
+</script>
+
+
+
+</head>
+<body>
+
+
+
+
+
+
+
+</body>
+</html>
