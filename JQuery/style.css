@@ -1,0 +1,17 @@
+*{margin:5px;
+
+}
+
+.container{
+	width: 600px;
+	background-color:pink;
+	position:relative;
+	left: 300px;
+}
+.button{
+
+}
+
+.red{
+	color: red;
+}
