@@ -86,13 +86,6 @@
 					else if (world[i][j] == 22)
 						output +="<div class='pacright'></div>";
 
-					else if (world[i][j] ==33)
-						output +="<div class='pacup'></div>";
-
-					else if (world[i][j] == 44){
-						output +="<div class='pacbottom'></div>";
-					}
-
 				
 					if(world[i][j] == 0){
 						output+="<div class='empty'></div>";
@@ -104,48 +97,52 @@
 			//console.log(output);
 			document.getElementById("world").innerHTML= output;
 		}
-		function displaypacman(){ 
-				document.getElementById("pacman").style.top=pacman.y*20+"px";
-				document.getElementById("pacman").style.left=pacman.x*20+"px";
-		}
+		//function displaypacman(){ 
+				//document.getElementById("pacman").style.top=pacman.y*20+"px";
+				//document.getElementById("pacman").style.left=pacman.x*20+"px";
+		//}
 
 
 		function displayscore(){ 
 				document.getElementById("score").innerHTML = score ;
 		}
 
-		displayworld(); 
-		displaypacman();
-		displayscore();
+		function displayworld(); 
+		function displaypacman();
+		function displayscore();
 		
 
 
 		document.onkeydown = function(e){
 			if(e.keyCode == 37 && world[pacman.y][pacman.x-1] != 2){
-				pacman.x--; world[pacman.y][pacman.x] = 11;
+				pacman.x--; 
+				world[pacman.y][pacman.x] = 11;
 
 			}
 
-			else if (e.keyCode ==39 && world[pacman.y][pacman.x+1] != 2){
+			else if (e.keyCode == 39 && world[pacman.y][pacman.x+1] != 2){
 				pacman.x++;	
 				world[pacman.y][pacman.x] = 22;
 					
 			}	
 
 			else if (e.keyCode ==38 && world[pacman.y-1][pacman.x] !=2){
-				pacman.y--;	//world[pacman.y][pacman.x] = 33;			
+				pacman.y--;	
+				//world[pacman.y][pacman.x] = 33;			
 			}
 
 			else if (e.keyCode ==40  && world[pacman.y+1][pacman.x] !=2){
-				pacman.y++; //world[pacman.y][pacman.x] = 44;					
+				pacman.y++; 
+				//world[pacman.y][pacman.x] = 44;					
 			}
+
 			console.log(world[pacman.y][pacman.x]);
 
 			if(world[pacman.y][pacman.x] == 1){
 				world[pacman.y][pacman.x] = 0;
 				score+=10;
-				displayworld();
-				displayscore();
+				function displayworld();
+				function displayscore();
 				//displaycereza();
 			    //console.log(e.keyCode);	
 			}
@@ -155,11 +152,11 @@
 			if(world[pacman.y][pacman.x] == 3){
 				world[pacman.y][pacman.x] = 0;
 				score+=50;
-				displayworld();
-				displayscore();	
+				function displayworld();
+				function displayscore();	
 			}
 	
-			displaypacman();
+			function displaypacman();
 		}
 		</script>
 
