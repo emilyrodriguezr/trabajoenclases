@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Gatito ninja</title>
+	<link rel="stylesheet" type="text/css" href="gatoninja.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+	<script type="text/javascript">
+	$(document).ready(function(){
+	 $.fn.extend({
+	 	toggleImage: function (a , b){
+	 			return $(this).attr({'src':$(this).attr ('src') == b ? a : b, 'srca':$(this).attr ('srca') == b ? a : b});
+
+	 	}
+	 });
+  		$("img").click(function(){
+  			$(this).toggleImage($(this).attr('src'),$(this).attr('srca'));
+  		});
+ 	});
+</script>
+
+
+</head>
+<body>
+ 	<div class="contenedor">
+
+ 		<img src='img/ninja0.png' srca="img/cat0.png" width="250px">
+ 		<img src='img/ninja1.png' srca="img/cat1.png" width="250px">
+ 		<img src='img/ninja2.png' srca="img/cat2.png" width="250px">
+ 		<img src='img/ninja3.png' srca="img/cat3.png" width="250px">
+ 		<img src='img/ninja4.png' srca="img/cat4.png" width="250px">
+	</div>
+
+</body>
+</html>
