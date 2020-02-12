@@ -1,0 +1,64 @@
+<html>
+
+	<head>
+
+		<meta charset="UTF-8">
+		<title>Cursor fuera</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+       
+<style type="text/css">
+	
+	.container img{
+
+    height:350px;
+    width: 300px;
+
+}
+</style>
+    </head>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    
+    <script>
+
+        $(document).ready(function(){
+
+            $('img').hover(function(){
+
+                 temp=$(this).attr('src');
+                console.log(temp)
+
+				$(this).attr('src', $(this).attr('data-alt-src'));
+				}, function(){
+				$(this).attr('src',temp);
+			});
+        
+
+        })
+
+    </script>
+
+
+	<body>
+        <div class="container">
+
+                <img src='cat1.jpeg' data-alt-src='cat2.jpg' /> 
+                <img src='cat3.jpeg' data-alt-src='cat4.jpg' /> 
+                <img src='cat1.jpeg' data-alt-src='cat2.jpg' /> 
+                <img src='cat3.jpeg' data-alt-src='cat4.jpg' /> 
+                <img src='cat1.jpeg' data-alt-src='cat2.jpg' /> 
+                <img src='cat3.jpeg' data-alt-src='cat4.jpg' /> 
+                <img src='cat1.jpeg' data-alt-src='cat2.jpg' /> 
+                <img src='cat3.jpeg' data-alt-src='cat4.jpg' />       
+      
+
+
+        </div>
+
+
+        
+
+        
+    </body>
+
+</html>
