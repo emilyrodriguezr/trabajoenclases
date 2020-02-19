@@ -1,0 +1,63 @@
+*{
+margin: 0px;
+}
+
+#name{
+text-transform:uppercase;
+margin-top:23px;
+}
+#all{
+background-image: radial-gradient(circle, white, #ccff00, #ff7746);
+
+}
+.container{
+display: inline-block;
+width: 700px;
+}
+
+#right{
+height: 1058px;
+width: 590px;
+display: inline-block;
+vertical-align: top;
+text-align: center;
+}
+
+#cuadrito{
+width: 269px;
+    height: 383px;
+    text-align: center;
+    margin-left: 135px;
+    margin-bottom: 77px;
+    margin-top: 40px;
+}
+
+.overlay{
+	background: url("carta.png");
+	width: 100%;
+	height: 100%;
+}
+
+#tittle{
+font-size: 20px;
+    position: relative;
+    top: 16px;
+}
+.tabla{
+margin-left: 35px;
+
+}
+#pokemonimagen{
+width: 100px;
+height: 100px;
+padding: 44px;
+}
+
+.video{
+position: relative;
+display: inline-block;
+}
+.tabla tr td {
+padding-right: 25px;
+}
+
