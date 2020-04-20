@@ -1,0 +1,44 @@
+*{
+margin:0px;
+
+}
+#container{
+width: 1500px;
+height: 900px;
+background:linear-gradient(70deg, #4a4a4a, #12151e, #c7c7c7, #340300, #e3b200, #0c0c0b);
+background-size: 100% 100%;
+padding-top: 40px;
+padding-left: 56px;
+}
+#box{
+width: 868px;
+height: 200px;
+margin-left: 200px;
+margin-top: -41px;
+padding: 45px;
+}
+.box2{
+border: solid 1px black;
+width: 600px;
+height: 300px;
+margin-left: 387px;
+background-color: white;
+background:url("img/carta.jpg");
+background-size: 100% 100%;
+border-radius: 48px;
+padding-left: 20px;
+}
+.img{
+width:200px;
+height: 200px;
+display: inline-block;
+}
+h2{
+vertical-align:center;
+margin: 20px;	
+}
+#image{
+margin-top: -60px;
+margin-left: 556px;	
+height: 150px;
+}

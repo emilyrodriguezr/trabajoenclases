@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Game of thrones</title>
+	<link rel="stylesheet" type="text/css" href="got.css">
+	<meta charset="utf-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+	<script type="text/javascript">
+
+		   function viewHouses(x){
+            var id=parseInt(x);
+            var lord="";
+            $.get("https://anapioficeandfire.com/api/houses/"+id, function(res) {
+                console.log(res);               
+               $('#name').html(res.name);
+               $('#region').html("Region: "+ res.region);
+               $('#coatOfArms').html("Coat of Arms: "+res.coatOfArms);
+                lord=res.currentLord;
+                if(lord!=""){
+                    $.get(res.currentLord, function(res2) {
+                         $('#currentlord').html("Current Lord: "+res2.name);
+                    
+                     }, "json");
+               }
+               var titulos="";
+                  for(var j = 0; j < res.titles.length; j++) {                               
+                        titulos+="<li>" + res.titles[j]+"</li>";
+                    }
+
+                $('#titles').html("Titles: "+titulos);
+                $('#founded').html("Founded: "+res.founded)
+            }, "json");
+           $('#information').show();
+			}
+            $(document).ready(function() {
+                $('#information').hide();
+                $('.img').click(function(){
+                    viewHouses($(this).attr('id'));
+                });
+              
+            });
+
+	</script>
+</head>
+<body>
+
+<div id="container">
+	<img src="img/gotback.png" id="image">
+	<div id="box">
+	 <img class="img" id="362" src="img/stark.jpg">
+	 <img class="img" id="378" src="img/targaryen.jpg">
+	 <img class="img" id="229" src="img/lannister.jpg">
+	 <img class="img" id="15" src="img/baratheon.png">
+	</div> <!--Fin div box-->
+
+	<div class="box2" id="information">
+		<h2>Detalles de la casa</h2>
+                <h3 id="name"></h3>
+                <h4 id="region"></h4>
+                <h4 id="currentlord"></h4>
+
+                <h4 id="coatOfArms"></h4>
+                
+                <ul id="titles"></ul>
+                <h4 id="founded"></h4>
+
+         </div>
+         
+
+	</div><!--Fin box2-->
+
+</div> <!--Fin div container-->
+</body>
+</html>
